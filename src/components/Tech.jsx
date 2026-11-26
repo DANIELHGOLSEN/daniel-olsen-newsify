@@ -1,4 +1,5 @@
 import useFetchData from "../Hooks/useTanStack";
+import Swiper from "../Hooks/useSwipe"
 
 export default function Tech() {
     const TechKey = import.meta.env.VITE_TECHAPI
@@ -14,8 +15,8 @@ export default function Tech() {
                 <ul>
                     {data.results.map((article) => {
                         return (
-                            <li key={article.url}>
-                                {article?.multimedia ? <img src={article.multimedia[0].url} alt=""  /> : <img src="" alt=""/>}
+                            <li key={article.url} >
+                                {article?.multimedia ? <img src={article.multimedia[0].url} alt="" /> : <img src="..assets/kittens.jpg" alt="" />}
                                 <h3>{article.title}</h3>
                                 <p>{article.description}</p>
                                 <a href={article.url} target="_blank" rel="noreferrer">
