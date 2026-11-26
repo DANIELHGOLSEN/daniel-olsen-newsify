@@ -1,10 +1,11 @@
 import "./Home.scss"
-import Sport from '../components/Sport'
+import Fashion from '../components/Fashion'
+import Food from "../components/Food"
+import Tech from "../components/Tech"
+import Movies from "../components/Movie"
 
 export default function Home() {
-    const techKey = import.meta.env.TECHAPI
-    const foodKey = import.meta.env.FOODAPI
-    const movieKey = import.meta.env.MOVIEAPI
+    
 
     return(
       <>
@@ -13,9 +14,18 @@ export default function Home() {
             <h1>Newsify</h1>
         </header>
         <main>
-            <input type="search" name="Search news" id="searchBar" />
+            <input type="search" name="Search for news" id="searchBar" />
             <section>
-                <Sport />
+                <Fashion />
+            </section>
+            <section>
+                <Food />
+            </section>
+            <section>
+                <Movies />
+            </section>
+            <section>
+                <Tech />
             </section>
         </main>
       </>
